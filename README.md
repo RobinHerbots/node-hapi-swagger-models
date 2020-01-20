@@ -2,11 +2,6 @@
 
 Generate javascript models from a self-documenting Swagger API.
 
-- backbone models
-- plain json
-- typescript
-- js class (classout)
-
 ## Install
 
     $ npm install -g node-swagger-models
@@ -19,8 +14,9 @@ nsmconfig.json
 ```
 {
   "fileOutput": "./tmp",
+  "filePrefix": "",  
   "api": "http://localhost:1802/api-docs/v1/swagger.json",
-  "format": "backbone|vanilla|classout|typescript"
+  "format": "backbone|vanilla|classout|typescript|typescript_interface"
 }
 ```
 
@@ -31,6 +27,7 @@ package.json
 ...
 node-swagger-models : {
   "fileOutput": "./tmp",
+  "filePrefix": "",  
   "api": "http://localhost:1802/api-docs/v1/swagger.json",
   "format": "backbone"
 }
@@ -44,12 +41,21 @@ nsmconfig.js
 // Using a js config allows for custom formatters
 module.exports = {
   "fileOutput": "./tmp",
+  "filePrefix": "",  
   "api": "http://localhost:1802/api-docs/v1/swagger.json",
   "format": function(type, urlRoot, modelName, model, scriptModel, scriptValidation) {
     return ['module.exports = {', scriptModel.join('\n'), '};']
   }
 }
 ```
+
+## Available formatters
+
+- backbone models (backbone)
+- plain json (vanilla)
+- typescript models (typescript)
+- js class (classout)
+- typescript interfaces (typescript_interface)
 
 ## Notes
 

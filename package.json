@@ -39,7 +39,8 @@
   },
   "node-swagger-models": {
     "fileOutput": "./tmp",
-    "api": "https://localhost:44372/api-docs/v1/swagger.json",
-    "format": "backbone"
+    "filePrefix": "i",
+    "api": "https://localhost:44372/api-docs/1.0/swagger.json",
+    "format": "typescript_interface"
   }
 }
