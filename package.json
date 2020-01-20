@@ -1,6 +1,6 @@
 {
   "name": "node-swagger-models",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Generate javascript models from a Swagger API",
   "main": "./lib/swagger-models.js",
   "devDependencies": {
