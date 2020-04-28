@@ -31,8 +31,7 @@
   },
   "homepage": "https://github.com/RobinHerbots/node-swagger-models",
   "dependencies": {
-    "bluebird": "^3.5.3",
-    "swagger-client": "^3.8.22"
+    "swagger-client": "^3.10.1"
   },
   "scripts": {
     "start": "node bin/node-swagger-models.js"
@@ -40,7 +39,7 @@
   "node-swagger-models": {
     "fileOutput": "./tmp",
     "filePrefix": "i",
-    "api": "https://localhost:44372/api-docs/1.0/swagger.json",
+    "api": "https://localhost:44372/api-docs/2.0/swagger.json",
     "format": "typescript_interface"
   }
 }

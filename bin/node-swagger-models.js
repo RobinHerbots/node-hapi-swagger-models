@@ -16,6 +16,6 @@ if (process.argv[2] !== undefined) {
 
 nsm(config || {}).then(function(data) {
     console.log(data);
-}).error(function(data){
+}).catch(function(data){
     console.log(data);
 });
